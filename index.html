@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iframe Overlay</title>
+  <link rel="stylesheet" href="iframe-overlay.css">
+</head>
+<body>
+  <!-- Main content would go here -->
+  <div class="main-content">
+    <h1>Website Content</h1>
+    <p>This is the main website content that will be behind the overlay.</p>
+  </div>
+
+  <!-- Iframe Overlay Container -->
+  <div id="iframe-overlay" class="iframe-overlay-container">
+    <!-- Header with title and close button -->
+    <div class="iframe-overlay-header">
+      <h2 class="iframe-overlay-title">Web Viewer</h2>
+      <button id="close-overlay" class="iframe-overlay-close-btn" aria-label="Close">&times;</button>
+    </div>
+    
+    <!-- URL Input Section -->
+    <div class="iframe-overlay-input-section">
+      <input 
+        type="url" 
+        id="url-input" 
+        class="iframe-overlay-url-input" 
+        placeholder="Enter website URL"
+        value="https://example.com">
+      <button id="load-url" class="iframe-overlay-load-btn">Load</button>
+    </div>
+    
+    <!-- Iframe Container -->
+    <div class="iframe-overlay-iframe-container">
+      <iframe 
+        id="web-viewer" 
+        class="iframe-overlay-iframe" 
+        src="https://example.com"
+        title="Web Viewer"
+        sandbox="allow-scripts allow-same-origin allow-forms">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Toggle Button -->
+  <button id="toggle-overlay" class="iframe-overlay-toggle-btn">Web Viewer</button>
+
+  <!-- JavaScript -->
+  <script src="iframe-overlay.js"></script>
+</body>
+</html>
